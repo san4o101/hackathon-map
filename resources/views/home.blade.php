@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    @map($array)
+    <div id="map"></div>
 @endsection

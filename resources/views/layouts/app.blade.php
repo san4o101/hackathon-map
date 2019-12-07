@@ -18,7 +18,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @mapstyles
 </head>
 <body>
     <div id="app">
@@ -79,5 +78,4 @@
         </main>
     </div>
 </body>
-@mapscripts
 </html>

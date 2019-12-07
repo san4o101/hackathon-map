@@ -8,7 +8,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import "~font-awesome";
+@import "~leaflet";
 
+#map {
+    width: 60% !important;
+    height: 80vh !important;
+}
 .gnw-map-service {
     width: 60% !important;
     height: 80vh !important;
