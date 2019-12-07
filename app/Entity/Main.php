@@ -29,4 +29,9 @@ use Illuminate\Database\Eloquent\Model;
 class Main extends Model
 {
     public $timestamps = false;
+
+    public function opening()
+    {
+        return $this->hasOne(Opening::class, 'id', 'opening_id');
+    }
 }

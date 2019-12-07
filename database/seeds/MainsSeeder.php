@@ -17,7 +17,7 @@ class MainsSeeder extends \Illuminate\Database\Seeder
             } else {
                 $objID = \App\Entity\ObjectType::where('type', '=', 'Кіоск')->first()->id;
             }
-            if($row[10] == 'продовльчі') {
+            if($row[10] == 'продовольчі') {
                 $specID = \App\Entity\Specialization::where('title', '=', 'Продовольчі')->first()->id;
             } else {
                 $specID = \App\Entity\Specialization::where('title', '=', 'Не продовольчі')->first()->id;
