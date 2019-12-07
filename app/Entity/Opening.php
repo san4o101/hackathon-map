@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ObjectType extends Model
+class Opening extends Model
 {
     public $timestamps = false;
 }
