@@ -43,7 +43,9 @@ $('#find').on('click', function (event) {
     event.preventDefault();
     $.get('/map', $('form').serialize())
         .done(function(data) {
-            map.removeLayer(layer);
+            layer.clearLayers();
             createMarkers(data, layer);
+            var layerGroup = L.layerGroup(layer).addTo(map);
+
         });
 });
