@@ -2,14 +2,14 @@
 
 @section('content')
     @map([
-    'lat' => '48.134664',
-    'lng' => '11.555220',
-    'zoom' => '6',
+    'lat' => '48.5097',
+    'lng' => '32.2656',
+    'zoom' => '13',
     'markers' => [[
-    'title' => 'Go NoWare',
-    'lat' => '48.134664',
-    'lng' => '11.555220',
-    'url' => 'https://gonoware.com',
+    'title' => 'yatran',
+    'lat' => '48.51207',
+    'lng' => '32.26755',
+    'url' => 'http://yatran.com/',
     ]],
     ])
 @endsection
