@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $street
  * @property string $number
  * @property string $homeDesc
- * @property double $latitude
- * @property double $longitude
+ * @property string $latitude
+ * @property string $longitude
  * @property integer $object_type_id
  * @property integer $specialization_id
  * @property integer $product_range_id

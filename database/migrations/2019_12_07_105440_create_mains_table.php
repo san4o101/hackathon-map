@@ -22,8 +22,8 @@ class CreateMainsTable extends Migration
             $table->string('street');
             $table->string('number');
             $table->string('homeDesc')->default(null)->nullable();
-            $table->decimal('latitude');
-            $table->decimal('longitude');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->bigInteger('object_type_id')->unsigned()->index();
             $table->bigInteger('specialization_id')->unsigned()->index();
             $table->bigInteger('product_range_id')->unsigned()->index();
