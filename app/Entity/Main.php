@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Entity;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ObjectType extends Model
+class Main extends Model
 {
     public $timestamps = false;
 }
