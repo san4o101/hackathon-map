@@ -30,6 +30,10 @@ class Main extends Model
 {
     public $timestamps = false;
 
+    protected $fillable = ['name', 'country', 'region', 'city', 'street', 'number', 'homeDesc', 'latitude', 'longitude',
+        'object_type_id', 'specialization_id', 'product_range_id', 'supplier', 'erdpou_code', 'retail_space', 'opening_id',
+        'opening_desc' ];
+
     public function opening()
     {
         return $this->hasOne(Opening::class, 'id', 'opening_id');

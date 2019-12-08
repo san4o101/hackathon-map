@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     findBtn.on('click', function (event) {
         event.preventDefault();
-        $.get('/map', $('form').serialize())
+        $.get('/map', $('form#filterForm').serialize())
             .done(function(data) {
                 layer.clearLayers();
                 createMarkers(data, layer);
@@ -92,6 +92,7 @@ $(document).ready(function() {
     let lngHiddenModal = $('#lngHiddenModal');
     let latHiddenModal = $('#latHiddenModal');
     let modalForm = $('#modalForm');
+    let saveModal = $('#saveModal');
     function onMapClick(e) {
         geocoder.reverse(e.latlng, map.options.crs.scale(map.getZoom()), function(results) {
             let r = results[0];
@@ -109,6 +110,27 @@ $(document).ready(function() {
             }
         });
     }
+
+    saveModal.on('click', function() {
+        $.ajax({
+            type: "POST",
+            url: '/create',
+            data: {
+                _token: CSRF_TOKEN,
+                data: modalForm.serializeArray()
+            },
+        }).fail(function(data, status) {
+            modalForm.parent().parent().css('border', '3px solid red');
+        }).done(function (data, status) {
+            $('#modalWindow').modal('hide');
+            $.get('/map', $('form#filterForm').serialize())
+                .done(function(data) {
+                    layer.clearLayers();
+                    createMarkers(data, layer);
+                    L.layerGroup(layer).addTo(map);
+                });
+        })
+    });
 
     map.on('click', onMapClick);
 });

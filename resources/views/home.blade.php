@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="float-left col-md-4">
-        <form>
+        <form id="filterForm">
             @include('partials.filtration')
             <div class="form-group">
                 <label for="street">Вулиця</label>
@@ -17,6 +17,12 @@
                 <button id="clear" type="button" name="clear" class="btn btn-secondary">Очистити</button>
             </div>
         </form>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show position-relative w-100" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div id="map"></div>
 
@@ -38,6 +44,10 @@
                         <div class="form-group">
                             <label for="nameModal">Назва об'єкту</label>
                             <textarea class="form-control" type="text" name="nameModal" id="nameModal"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplierModal">Постачальник продукції</label>
+                            <textarea class="form-control" type="text" name="supplierModal" id="supplierModal"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="streetModal">Вулиця</label>
@@ -70,7 +80,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
-                    <button type="button" class="btn btn-success">Зберегти</button>
+                    <button type="button" class="btn btn-success" id="saveModal">Зберегти</button>
                 </div>
             </div>
         </div>
