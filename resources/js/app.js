@@ -123,6 +123,7 @@ $(document).ready(function() {
             modalForm.parent().parent().css('border', '3px solid red');
         }).done(function (data, status) {
             $('#modalWindow').modal('hide');
+            $('#centerModal').modal();
             $.get('/map', $('form#filterForm').serialize())
                 .done(function(data) {
                     layer.clearLayers();

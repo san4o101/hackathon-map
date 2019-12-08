@@ -18,15 +18,24 @@
             </div>
         </form>
     </div>
-    <div class="alert alert-success alert-dismissible fade show position-relative w-100" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="centerModal" tabindex="-1" role="dialog" aria-labelledby="centerModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Успішно додано!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div id="map"></div>
 
-    <!-- Modal -->
+    <!-- Create Modal -->
     <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
