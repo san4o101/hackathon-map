@@ -24,11 +24,11 @@ class MainsSeeder extends \Illuminate\Database\Seeder
             }
             if($row[11] == 'борошно') {
                 $prodID = \App\Entity\RangeProduct::where('title', '=', 'Борошно')->first()->id;
-            } elseif($row[11] == 'будівельні та господарськітовари') {
+            } elseif($row[11] == 'будівельні та господарські товари') {
                 $prodID = \App\Entity\RangeProduct::where('title', '=', 'Будівельні та господарські товари')->first()->id;
             } elseif($row[11] == 'Кондитерські вироби') {
                 $prodID = \App\Entity\RangeProduct::where('title', '=', 'Кондитерські вироби')->first()->id;
-            } elseif($row[11] == "м'ясні та ковбасні вироби") {
+            } elseif($row[11] == "м`ясні та ковбасні вироби") {
                 $prodID = \App\Entity\RangeProduct::where('title', '=', "М'ясні та ковбасні вироби")->first()->id;
             } elseif($row[11] == 'одяг') {
                 $prodID = \App\Entity\RangeProduct::where('title', '=', 'Одяг')->first()->id;

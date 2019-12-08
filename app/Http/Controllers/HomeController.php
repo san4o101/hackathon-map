@@ -37,7 +37,23 @@ class HomeController extends Controller
         if($type = $request->get('type')) {
             $query->where('object_type_id', '=', $type);
         }
+        if($street = $request->get('street')) {
+            $query->where('street', 'LIKE', '%'.$street.'%');
+        }
+        if($supplier = $request->get('supplier')) {
+            $query->where('supplier', 'LIKE', '%'.$supplier.'%');
+        }
         $data = $query->get()->toArray();
         return response()->json($data);
+    }
+
+    public function create(Request $request)
+    {
+        $name = $request->get('nameModal');
+        $country = 'Україна';
+        $region = 'Кіровоградська область';
+        $city = 'Кропивницький';
+        $street = $request->get('streetModal');
+
     }
 }
