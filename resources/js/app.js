@@ -133,5 +133,9 @@ $(document).ready(function() {
         })
     });
 
+    $('#modalWindow').on('hidden.bs.modal', function () {
+        map.removeLayer(marker);
+    });
+
     map.on('click', onMapClick);
 });
