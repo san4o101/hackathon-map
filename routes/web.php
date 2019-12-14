@@ -32,4 +32,8 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/map', 'HomeController@map')->name('map');
+
 Route::post('/create', 'HomeController@create')->name('create');
+Route::get('/{marker}/edit', 'HomeController@editForm')->name('edit');
+Route::post('/{marker}/edit', 'HomeController@edit');
+Route::delete('/{marker}/delete', 'HomeController@delete')->name('delete');
